@@ -8,7 +8,16 @@
   --color-highlight-css: #2965f1;
   --color-highlight-js: #f0db4f;
 }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+html {
+  box-sizing: border-box;
+}
 body {
+  width: 100vw;
   background-color: var(--color-background);
   font-family: "ZCOOL KuaiLe", cursive;
   overflow-x: hidden;
@@ -18,10 +27,11 @@ body {
   background: transparent;
 } */
 .row {
-  width: 1340px;
+  display: grid;
+  place-items: center;
+  width: 90vw;
   height: 100vh;
-  margin: 0 auto 0 auto;
-  border-bottom: 2px solid var(--color-primary);
+  margin: 0 auto;
 }
 h1 {
   font-size: 3rem;
@@ -29,11 +39,14 @@ h1 {
   color: var(--color-primary);
   display: grid;
   place-items: center;
-  margin: 0;
 }
 h2 {
   font-size: 2.5rem;
   font-weight: bold;
+}
+section,
+footer {
+  border-top: 2px solid var(--color-primary);
 }
 a {
   text-decoration: none;
@@ -79,10 +92,11 @@ button {
 /* Header */
 .landing-profile {
   width: 70rem;
+  height: fit-content;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 auto 0 auto;
+  margin: 0 auto;
 }
 .welcome-note {
   font-size: 3rem;
@@ -185,10 +199,10 @@ button {
 .showcase {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  grid-row-gap: 2rem;
+  grid-column-gap: 3rem;
   justify-items: center;
-  padding-bottom: 2rem;
-  margin-top: 2rem;
+  padding-bottom: 3rem;
+  margin-top: 3rem;
 }
 .skill {
   display: flex;
@@ -204,6 +218,7 @@ button {
 .skill p {
   font-size: 1.2rem;
   font-weight: bold;
+  padding: 1rem 0;
 }
 .badge {
   width: 6rem;
@@ -214,14 +229,13 @@ button {
 }
 /* CONTACT */
 #contact {
-  /* background-color: #fff; */
-  width: 100rem;
+  width: 90vw;
   height: fit-content;
 }
 .social-links {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .mail {
@@ -231,6 +245,7 @@ button {
 .mail p {
   font-size: 2rem;
   font-family: serif;
+  padding-right: 25rem;
 }
 .other-social-links {
   display: grid;
