@@ -30,7 +30,7 @@ body {
   display: grid;
   place-items: center;
   width: 90vw;
-  height: 100vh;
+  /* height: 100vh; */
   margin: 0 auto;
 }
 h1 {
@@ -46,6 +46,7 @@ h2 {
 }
 section,
 footer {
+  height: fit-content;
   border-top: 2px solid var(--color-primary);
 }
 a {
@@ -75,6 +76,10 @@ button {
   width: 4rem;
   height: 4rem;
 }
+.nav-icon img {
+  width: 1.5rem;
+  height: 1.5rem;
+}
 .nav-items ul {
   display: flex;
   justify-content: space-between;
@@ -90,9 +95,10 @@ button {
   transform: scale(1.15);
 }
 /* Header */
+header {
+  height: 100vh;
+}
 .landing-profile {
-  width: 70rem;
-  height: fit-content;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -104,17 +110,29 @@ button {
 .highlight {
   color: var(--color-primary);
 }
+.landing-profile-photo {
+  width: 25rem;
+  height: 25rem;
+}
 /* ABOUT ME */
 .box {
   display: flex;
   align-items: center;
-  width: 70rem;
   margin: 0 auto 0 auto;
 }
 .content {
   font-size: 2rem;
   padding-left: 5rem;
   line-height: 3rem;
+}
+.rect-svg {
+  width: 130px;
+  height: 130px;
+  background-color: var(--color-primary);
+  transition: transform 2s;
+}
+.rect-svg:hover {
+  transform: rotate(360deg);
 }
 .highlight-html {
   color: var(--color-highlight-html);
@@ -133,7 +151,6 @@ button {
   height: fit-content;
 }
 .project {
-  width: 70rem;
   display: grid;
   grid-template-columns: 1fr 4fr;
   align-items: center;
@@ -200,9 +217,11 @@ button {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-column-gap: 3rem;
+  grid-row-gap: 3rem;
   justify-items: center;
-  padding-bottom: 3rem;
-  margin-top: 3rem;
+  align-items: center;
+  padding: 3rem 0;
+  /* margin-top: 3rem; */
 }
 .skill {
   display: flex;
@@ -229,15 +248,15 @@ button {
 }
 /* CONTACT */
 #contact {
-  width: 90vw;
   height: fit-content;
 }
 .social-links {
+  width: 90vw;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding-bottom: 3rem;
 }
-
 .mail {
   display: flex;
   align-items: center;
@@ -245,7 +264,6 @@ button {
 .mail p {
   font-size: 2rem;
   font-family: serif;
-  padding-right: 25rem;
 }
 .other-social-links {
   display: grid;
@@ -264,6 +282,6 @@ button {
 .hidden {
   display: none;
 }
-.projects-hidden {
+#projects-hidden {
   display: none;
 }
