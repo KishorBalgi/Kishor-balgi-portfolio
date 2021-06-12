@@ -25,11 +25,11 @@
       <div class="nav-icon"><button><img alt="NAV" src="Vendors/Icons/008-nav-icon.png"></button></div>
       <div class="nav-items">
         <ul>
-          <li><a href="#home">HOME</a></li>
-          <li><a href="#about-me">ABOUT ME</a></li>
-          <li><a href="#projects">PROJECTS</a></li>
-          <li><a href="#skills">SKILLS</a></li>
-          <li><a href="#">CONTACT</a></li>
+          <li><a class="nav-item" href="#home">HOME</a></li>
+          <li><a class="nav-item" href="#about-me">ABOUT ME</a></li>
+          <li><a class="nav-item" href="#projects">PROJECTS</a></li>
+          <li><a class="nav-item" href="#skills">SKILLS</a></li>
+          <li><a class="nav-item contact" href="#contact">CONTACT</a></li>
         </ul>
       </div>
     </nav>
@@ -255,5 +255,24 @@
         </div>
       </div>
     </footer>
+    <div class="form-box hidden">
+      <form>
+        <button><img class="close-contact" alt="X" src="Vendors/Icons/007-cancle.png"></button>
+        <div>
+          <label for="name">Name :</label>
+          <input id="name" name="name" type="text">
+        </div>
+        <div>
+          <label for="email">E-Mail :</label>
+          <input id="email" name="e-mail" type="email">
+        </div>
+        <div>
+          <label for="message">Message :</label>
+          <textarea id="message" name="message" type="text"></textarea>
+        </div>
+        <button type="submit">SEND</button>
+      </form>
+    </div>
+    <div class="overlay hidden"></div>
   </body>
 </html>
