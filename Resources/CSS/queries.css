@@ -77,12 +77,6 @@
     padding-top: 40px;
     order: 2;
   }
-  .project-description p {
-    padding-bottom: 30px;
-  }
-  h2 {
-    padding-bottom: 20px;
-  }
   .project-buttons {
     align-self: center;
   }
@@ -101,9 +95,20 @@
     margin-bottom: 15px;
     border-bottom: 2px solid var(--color-primary);
   }
+  .mail p {
+    font-size: 1.5rem;
+  }
 }
 @media only screen and (max-width: 435px) {
   .showcase {
-    grid-template-columns: 1fr;
+    grid-column-gap: 1.5rem;
+  }
+  .skill p {
+    font-size: 0.9rem;
+    padding: 0.7rem 0;
+  }
+  .badge {
+    width: 5rem;
+    height: 5rem;
   }
 }
