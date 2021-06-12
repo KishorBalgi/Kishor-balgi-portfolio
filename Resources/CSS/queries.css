@@ -23,7 +23,7 @@
 }
 @media only screen and (max-width: 985px) {
   .welcome-note {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
   .landing-profile-photo {
     width: 20rem;
@@ -41,14 +41,8 @@
   .nav-items {
     display: none;
   }
-}
-@media only screen and (max-width: 985px) {
-  .welcome-note {
-    font-size: 1.75rem;
-  }
-  .landing-profile-photo {
-    width: 15rem;
-    height: 15rem;
+  .nav-icon {
+    display: contents;
   }
 }
 @media only screen and (max-width: 825px) {
@@ -98,10 +92,31 @@
   .mail p {
     font-size: 1.25rem;
   }
+  h1 {
+    font-size: 2rem;
+  }
 }
 @media only screen and (max-width: 435px) {
+  .sticky-nav {
+    justify-content: space-between;
+    height: 45px;
+  }
+  .logo {
+    width: 4rem;
+    height: 3rem;
+    padding-left: 20px;
+  }
+  .nav-icon img {
+    margin-right: 20px;
+  }
+  .welcome-note {
+    font-size: 2.25rem;
+  }
   .showcase {
     grid-column-gap: 1.5rem;
+  }
+  .skill {
+    padding: 0.3rem 1rem;
   }
   .skill p {
     font-size: 0.9rem;
@@ -110,5 +125,29 @@
   .badge {
     width: 5rem;
     height: 5rem;
+  }
+}
+@media only screen and (max-width: 370px) {
+  .project-img {
+    width: 18rem;
+    height: 10rem;
+  }
+  .badge {
+    width: 4rem;
+    height: 4rem;
+  }
+}
+@media only screen and (max-width: 370px) {
+  .project-img {
+    width: 15rem;
+    height: 8rem;
+  }
+  .project-buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .project-buttons button {
+    margin-bottom: 15px;
   }
 }
