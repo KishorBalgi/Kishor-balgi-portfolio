@@ -96,7 +96,7 @@
     border-bottom: 2px solid var(--color-primary);
   }
   .mail p {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
   }
 }
 @media only screen and (max-width: 435px) {

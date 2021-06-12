@@ -1,7 +1,7 @@
 /* CSS STYLES */
 :root {
-  --color-primary: #8e44ad; /*#ffa000;*/
-  --color-primary-dark: #7d3c98; /*#ff8f00;*/
+  --color-primary: #3498db; /*#ffa000;*/
+  --color-primary-dark: #2e86c1; /*#ff8f00;*/
   --color-background: rgb(238, 238, 238);
   --color-highlight: #00f;
   --color-highlight-html: #f06529;
