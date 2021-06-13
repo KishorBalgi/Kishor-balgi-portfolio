@@ -20,8 +20,6 @@
   .showcase {
     grid-template-columns: repeat(3, 1fr);
   }
-}
-@media only screen and (max-width: 985px) {
   .welcome-note {
     font-size: 2.5rem;
   }
@@ -90,16 +88,20 @@
     border-bottom: 2px solid var(--color-primary);
   }
   .mail p {
-    font-size: 1.25rem;
+    font-size: 1.1rem;
   }
   h1 {
     font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.75rem;
   }
 }
 @media only screen and (max-width: 435px) {
   .sticky-nav {
     justify-content: space-between;
     height: fit-content;
+    transition: all 0.5s ease;
   }
   .logo {
     width: 4rem;

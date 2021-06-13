@@ -20,7 +20,7 @@ colorAdd.addEventListener("click", (e) => {
   colorChange(+color.value);
 });
 // SELECTORS:
-const nav = document.querySelector(".sticky-nav");
+const nav = document.querySelector("nav");
 const header = document.querySelector("header");
 const sections = document.querySelectorAll("section");
 const logo = document.querySelector(".logo");
@@ -33,12 +33,33 @@ const contactBtn = document.querySelector(".contact");
 const contactForm = document.querySelector(".form-box");
 const overlay = document.querySelector(".overlay");
 const closeContact = document.querySelector(".close-contact");
+let click = 0;
+// NAV REVEAL:
+const mouseOver = function () {
+  nav.classList.add("nav-reveal");
+};
+const mouseOut = function () {
+  nav.classList.remove("nav-reveal");
+};
 //STICKY NAV:
 const navHeight = nav.getBoundingClientRect().height;
 const stickyNav = function (entries) {
   const [entry] = entries;
-  if (!entry.isIntersecting) nav.classList.remove("hidden");
-  else nav.classList.add("hidden");
+  if (!entry.isIntersecting) {
+    nav.classList.add("sticky-nav");
+    nav.classList.remove("nav");
+    if (screen.width > 950) {
+      nav.removeEventListener("mouseover", mouseOver);
+      nav.removeEventListener("mouseout", mouseOut);
+    }
+  } else {
+    if (screen.width > 950) {
+      nav.classList.remove("sticky-nav");
+      nav.classList.add("nav");
+      nav.addEventListener("mouseover", mouseOver);
+      nav.addEventListener("mouseout", mouseOut);
+    }
+  }
 };
 const headerObserver = new IntersectionObserver(stickyNav, {
   root: null,
@@ -53,7 +74,7 @@ navItems.addEventListener("click", function (e) {
   if (e.target.classList.contains("nav-item")) {
     const id = e.target.getAttribute("href");
     document.querySelector(id).scrollIntoView({ behavior: "smooth" });
-    navMobBtn.click();
+    if (click) navMobBtn.click();
   }
 });
 //CONTACT FORM:
@@ -91,6 +112,7 @@ projectsMore.addEventListener("click", function () {
 // NAV MOBILE:
 navMobBtn.addEventListener("click", function () {
   logo.classList.toggle("hidden");
+  navItems.classList.toggle("nav-mobile");
   if (navMobBtnImg.getAttribute("src") === "Vendors/Icons/008-nav-icon.png") {
     navMobBtnImg.setAttribute("src", "Vendors/Icons/009-nav-close.png");
     navMobBtnImg.style.margin = "0";
@@ -99,14 +121,26 @@ navMobBtn.addEventListener("click", function () {
     nav.style.paddingTop = "50px";
     nav.style.justifyContent = "flex-start";
     nav.style.flexDirection = "column";
+    click = 1;
   } else {
     navMobBtnImg.setAttribute("src", "Vendors/Icons/008-nav-icon.png");
-    navMobBtnImg.style.margin = "20px";
+    navMobBtnImg.style.margin = "0 20px";
     navItems.style.display = "none";
     nav.style.height = "fit-content";
     nav.style.paddingTop = "0";
     nav.style.justifyContent = "space-between";
     nav.style.flexDirection = "row";
+    click = 0;
   }
-  navItems.classList.toggle("nav-mobile");
+});
+window.addEventListener("load", function () {
+  const width = screen.width;
+  console.log(width);
+  if (width <= 950) {
+    nav.classList.add("sticky-nav");
+    nav.classList.remove("nav");
+    nav.removeEventListener("mouseover", mouseOver);
+    nav.removeEventListener("mouseout", mouseOut);
+    // nav.classList.remove("nav-reveal");
+  }
 });

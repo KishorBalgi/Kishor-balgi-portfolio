@@ -11,7 +11,7 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
 html {
   box-sizing: border-box;
@@ -20,17 +20,11 @@ body {
   width: 100vw;
   background-color: var(--color-background);
   font-family: "ZCOOL KuaiLe", cursive;
+  z-index: 25;
   overflow-x: hidden;
 }
-/* ::-webkit-scrollbar {
-  width: 0; 
-  background: transparent;
-} */
 .row {
-  display: grid;
-  place-items: center;
   width: 90vw;
-  /* height: 100vh; */
   margin: 0 auto;
 }
 h1 {
@@ -61,23 +55,57 @@ button {
   background: none;
   cursor: pointer;
 }
+nav {
+  z-index: 50;
+  height: fit-content;
+}
+/* Scroll bar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: rgb(197, 197, 197);
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 50px;
+  background: var(--color-primary);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-primary-dark);
+}
 /* STICKY NAV */
+.nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-primary);
+  border-bottom-right-radius: 100px;
+  border-bottom-left-radius: 100px;
+  width: 40%;
+  margin: 0 auto;
+  padding-bottom: 40px;
+  transition: all 0.5s ease;
+  box-shadow: 2px 2px 10px 3px rgba(0, 0, 0, 0.356);
+  transform: translateY(-80%);
+}
+
 .sticky-nav {
   position: fixed;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   background-color: var(--color-primary);
   width: 100vw;
-  height: 55px;
+  height: fit-content;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   box-shadow: 2px 2px 10px 3px rgba(0, 0, 0, 0.356);
-  z-index: 50;
 }
 .logo {
   width: 4rem;
   height: 4rem;
+  margin-left: 10px;
 }
 .nav-icon {
   display: none;
@@ -95,7 +123,7 @@ button {
   display: inline-block;
   font-size: 1.05rem;
   font-weight: bold;
-  margin-right: 3rem;
+  margin: 0 2rem;
   transition: all 1s ease;
 }
 .nav-items ul li:hover {
@@ -113,14 +141,26 @@ button {
   font-size: 1.25rem;
   margin: 0;
 }
+.nav-reveal {
+  width: 100%;
+  padding-bottom: 10px;
+  transform: translateY(0%);
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
 /* Header */
 header {
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
 }
 .landing-profile {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-top: 100px;
   margin: 0 auto;
 }
 .welcome-note {
