@@ -99,7 +99,7 @@
 @media only screen and (max-width: 435px) {
   .sticky-nav {
     justify-content: space-between;
-    height: 45px;
+    height: fit-content;
   }
   .logo {
     width: 4rem;

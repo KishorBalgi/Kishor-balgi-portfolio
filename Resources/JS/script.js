@@ -22,16 +22,20 @@ colorAdd.addEventListener("click", (e) => {
 // SELECTORS:
 const nav = document.querySelector(".sticky-nav");
 const header = document.querySelector("header");
+const sections = document.querySelectorAll("section");
+const logo = document.querySelector(".logo");
 const navItems = document.querySelector(".nav-items");
+const navMobBtn = document.querySelector(".nav-icon");
+const navMobBtnImg = document.querySelector(".nav-icon img");
+const projectsMore = document.querySelector(".projects-more");
+const projectsHidden = document.getElementById("projects-hidden");
 const contactBtn = document.querySelector(".contact");
 const contactForm = document.querySelector(".form-box");
 const overlay = document.querySelector(".overlay");
 const closeContact = document.querySelector(".close-contact");
 //STICKY NAV:
 const navHeight = nav.getBoundingClientRect().height;
-console.log(navHeight);
 const stickyNav = function (entries) {
-  console.log(entries);
   const [entry] = entries;
   if (!entry.isIntersecting) nav.classList.remove("hidden");
   else nav.classList.add("hidden");
@@ -49,6 +53,7 @@ navItems.addEventListener("click", function (e) {
   if (e.target.classList.contains("nav-item")) {
     const id = e.target.getAttribute("href");
     document.querySelector(id).scrollIntoView({ behavior: "smooth" });
+    navMobBtn.click();
   }
 });
 //CONTACT FORM:
@@ -63,4 +68,45 @@ closeContact.addEventListener("click", function (e) {
 });
 overlay.addEventListener("click", function () {
   closeContact.click();
+});
+// SECTION REVEAL:
+const revealSection = function (entries, observer) {
+  const [entry] = entries;
+  if (!entry.isIntersecting) return;
+  entry.target.classList.remove("section-hidden");
+  observer.unobserve(entry.target);
+};
+const sectionObserver = new IntersectionObserver(revealSection, {
+  root: null,
+  threshold: 0.15,
+});
+sections.forEach(function (section) {
+  sectionObserver.observe(section);
+});
+// PROJECTS MORE:
+projectsMore.addEventListener("click", function () {
+  projectsHidden.style.display = "flex";
+  projectsMore.style.display = "none";
+});
+// NAV MOBILE:
+navMobBtn.addEventListener("click", function () {
+  logo.classList.toggle("hidden");
+  if (navMobBtnImg.getAttribute("src") === "Vendors/Icons/008-nav-icon.png") {
+    navMobBtnImg.setAttribute("src", "Vendors/Icons/009-nav-close.png");
+    navMobBtnImg.style.margin = "0";
+    navItems.style.display = "contents";
+    nav.style.height = "100vh";
+    nav.style.paddingTop = "50px";
+    nav.style.justifyContent = "flex-start";
+    nav.style.flexDirection = "column";
+  } else {
+    navMobBtnImg.setAttribute("src", "Vendors/Icons/008-nav-icon.png");
+    navMobBtnImg.style.margin = "20px";
+    navItems.style.display = "none";
+    nav.style.height = "fit-content";
+    nav.style.paddingTop = "0";
+    nav.style.justifyContent = "space-between";
+    nav.style.flexDirection = "row";
+  }
+  navItems.classList.toggle("nav-mobile");
 });
