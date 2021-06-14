@@ -135,7 +135,6 @@ navMobBtn.addEventListener("click", function () {
 });
 window.addEventListener("load", function () {
   const width = screen.width;
-  console.log(width);
   if (width <= 950) {
     nav.classList.add("sticky-nav");
     nav.classList.remove("nav");
