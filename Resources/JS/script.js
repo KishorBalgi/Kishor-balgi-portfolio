@@ -1,24 +1,4 @@
-// JAVASCRIPT CODE:
-// const root = document.documentElement.style;
-// const color = document.querySelector(".color");
-// const colorAdd = document.querySelector(".color-add");
-// const themes = [
-//   { primary: "#ffa000", dark: "#ff8f00" },
-//   { primary: "#E74C3C", dark: "#CB4335" },
-//   { primary: "#3498db", dark: "#2e86c1" },
-//   { primary: "#9B59B6", dark: "#884EA0" },
-//   { primary: "#52BE80", dark: "#27AE60" },
-//   { primary: "#F4D03F", dark: "#F1C40F" },
-//   { primary: "#AB47BC", dark: "#9C27B0" },
-// ];
-// const colorChange = function (i) {
-//   root.setProperty("--color-primary", themes[i].primary);
-//   root.setProperty("--color-primary-dark", themes[i].dark);
-// };
-// colorAdd.addEventListener("click", (e) => {
-//   e.preventDefault();
-//   colorChange(+color.value);
-// });
+// JavaScript:
 // SELECTORS:
 const nav = document.querySelector("nav");
 const header = document.querySelector("header");
@@ -28,37 +8,20 @@ const navItems = document.querySelector(".nav-items");
 const navMobBtn = document.querySelector(".nav-icon");
 const navMobBtnImg = document.querySelector(".nav-icon img");
 const projectsMore = document.querySelector(".projects-more");
-const projectsHidden = document.getElementById("projects-hidden");
+const projectsHidden = document.querySelectorAll(".projects-hidden");
 const contactBtn = document.querySelector(".contact");
 const contactForm = document.querySelector(".form-box");
 const overlay = document.querySelector(".overlay");
 const closeContact = document.querySelector(".close-contact");
 let click = 0;
-// NAV REVEAL:
-const mouseOver = function () {
-  nav.classList.add("nav-reveal");
-};
-const mouseOut = function () {
-  nav.classList.remove("nav-reveal");
-};
 //STICKY NAV:
 const navHeight = nav.getBoundingClientRect().height;
 const stickyNav = function (entries) {
   const [entry] = entries;
   if (!entry.isIntersecting) {
     nav.classList.add("sticky-nav");
-    nav.classList.remove("nav");
-    if (screen.width > 950) {
-      nav.removeEventListener("mouseover", mouseOver);
-      nav.removeEventListener("mouseout", mouseOut);
-    }
   } else {
-    if (screen.width > 950) {
-      nav.classList.remove("sticky-nav");
-      nav.classList.add("nav");
-      nav.addEventListener("mouseover", mouseOver);
-      nav.addEventListener("mouseout", mouseOut);
-    }
+    nav.classList.remove("sticky-nav");
   }
 };
 const headerObserver = new IntersectionObserver(stickyNav, {
@@ -106,8 +69,13 @@ sections.forEach(function (section) {
 });
 // PROJECTS MORE:
 projectsMore.addEventListener("click", function () {
-  projectsHidden.style.display = "flex";
-  projectsMore.style.display = "none";
+  if (projectsMore.innerHTML == "MORE") {
+    projectsHidden.forEach((p) => p.classList.remove("hidden"));
+    projectsMore.innerHTML = "LESS";
+  } else {
+    projectsHidden.forEach((p) => p.classList.add("hidden"));
+    projectsMore.innerHTML = "MORE";
+  }
 });
 // NAV MOBILE:
 navMobBtn.addEventListener("click", function () {
@@ -140,6 +108,5 @@ window.addEventListener("load", function () {
     nav.classList.remove("nav");
     nav.removeEventListener("mouseover", mouseOver);
     nav.removeEventListener("mouseout", mouseOut);
-    // nav.classList.remove("nav-reveal");
   }
 });

@@ -42,6 +42,9 @@
   .nav-icon {
     display: contents;
   }
+  .nav {
+    padding: 0 15px;
+  }
 }
 @media only screen and (max-width: 825px) {
   .box {
@@ -138,18 +141,19 @@
     width: 4rem;
     height: 4rem;
   }
+  .project-buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .project-buttons button {
+    margin-bottom: 15px;
+  }
 }
 @media only screen and (max-width: 370px) {
   .project-img {
     width: 15rem;
     height: 8rem;
-  }
-  .project-buttons {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  .project-buttons button {
-    margin-bottom: 15px;
   }
 }

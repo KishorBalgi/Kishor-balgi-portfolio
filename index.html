@@ -6,11 +6,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&display=swap"
-      rel="stylesheet"
-    />
     <link rel="stylesheet" href="Vendors/CSS/normalize.css" />
     <link rel="stylesheet" href="Resources/CSS/styles.css" />
     <link rel="stylesheet" href="Resources/CSS/queries.css">
@@ -36,30 +31,21 @@
       </nav>
       <div class="landing-profile row">
         <p class="welcome-note">
-          Hi,<br />I am &#60;<span class="highlight">Kishor Balgi</span
+          Hi!<br />I'm &#60;<span class="highlight">Kishor Balgi</span
           >&#62;,<br />a &#60;<span class="highlight">Front-End developer</span
           >&#62;<br />& a tech enthusiast.
           </p>
-        <!-- <form>
-          <input class="color" type="number" style="width: 30px;">
-          <button class="color-add">+</button>
-        </form> -->
       </div>
     </header>
     <section id="about-me" class="row section-hidden">
       <h1>&#60;About Me&#62;</h1>
       <div class="box">
-        <div class="animation">
-          <div class="rect-svg"></div>
-        </div>
         <div class="content">
           <p>
             I am Kishor Balgi, currently pursuing a Computer Science Engineering
             degree from INDIA. I like building web applications and sites. I am
             a front-end developer, skilled at
-            <span class="highlight-html">HTML</span>,
-            <span class="highlight-css">CSS</span> and
-            <span class="highlight-js">JavaScript</span>. I have built a few
+            HTML,CSS and JavaScript. I have built a few
             projects, which are functional and responsive. I also like diving
             into books and articles.
           </p>
@@ -68,6 +54,24 @@
     </section>
     <section id="projects" class="row section-hidden">
       <h1>&#60;Projects&#62;</h1>
+
+      <div class="project project-right">
+        <div class="project-description right">
+          <h2>Photographer Portfolio Website</h2>
+          <p>
+            This a portfolio website of a Kolkata based Photographer. The site is build using HTML, CSS and JS. The site displays works, services and contact info in a structured manner and it is also mobile friendly.
+          </p>
+          <div class="project-buttons">
+            <button class="project-but project-site-link">
+              <a href="https://debratnaghosh.github.io/debratnaghosh/" target="_blank">View Project</a>
+            </button>
+            <button class="project-but project-repo-link">
+              <a href="https://github.com/KishorBalgi/debratna-ghosh" target="_blank">View Repository</a>
+            </button>
+          </div>
+        </div>
+        <img class="project-img" src="Vendors/GIF/Debratna-Photo.gif" />
+      </div>
 
       <div class="project">
         <img class="project-img" src="Vendors/GIF/Clock-App.gif" />
@@ -105,7 +109,7 @@
         <img class="project-img" src="Vendors/GIF/Tic-Tac-Toe.gif" />
       </div>
 
-      <div class="project">
+      <div class="project projects-hidden">
         <img class="project-img" src="Vendors/GIF/To-Do-List-App.gif" />
         <div class="project-description left">
           <h2>To do list</h2>
@@ -123,7 +127,7 @@
         </div>
       </div>
 
-      <div class="project project-right" id="projects-hidden">
+      <div class="project project-right projects-hidden hidden">
         <div class="project-description right">
           <h2>Spotify clone</h2>
           <p>
@@ -141,7 +145,7 @@
         <img class="project-img" src="Vendors/GIF/Spotify-Clone.gif" />
       </div>
       <!-- SPARE -->
-      <div class="project hidden" id="projects-hidden">
+      <!-- <div class="project hidden" id="projects-hidden">
         <img class="project-img" src="" />
         <div class="project-description left">
           <h2>Title</h2>
@@ -155,9 +159,9 @@
             </button>
           </div>
         </div>
-      </div>
+      </div> -->
 
-      <div class="project project-right hidden" id="projects-hidden">
+      <!-- <div class="project project-right projects-hidden hidden">
         <div class="project-description right">
           <h2>Title</h2>
           <p></p>
@@ -171,7 +175,7 @@
           </div>
         </div>
         <img class="project-img" src="" />
-      </div>
+      </div> -->
 
       <button class="projects-more">MORE</button>
     </section>
@@ -192,6 +196,27 @@
           <p>JS</p>
         </div>
         <div class="skill">
+          <img class="badge" src="Vendors/Images/react-logo.png" alt="" />
+          <p>React</p>
+        </div>
+        <div class="skill">
+          <img
+            class="badge"
+            src="Vendors/Images/python-logo.png"
+            alt="PYTHON"
+          />
+          <p>Python</p>
+        </div>
+        
+        <div class="skill">
+          <img class="badge" src="Vendors/Images/c++-logo.png" alt="C++" />
+          <p>C++</p>
+        </div>
+        <div class="skill">
+          <img class="badge" src="Vendors/Images/c-logo.png" alt="" />
+          <p>C</p>
+        </div>
+        <div class="skill">
           <img class="badge" src="Vendors/Images/git-logo.png" alt="GIT" />
           <p>GIT</p>
         </div>
@@ -204,16 +229,17 @@
           <p>GitHub</p>
         </div>
         <div class="skill">
-          <img
-            class="badge"
-            src="Vendors/Images/python-logo.png"
-            alt="PYTHON"
-          />
-          <p>Python</p>
-        </div>
-        <div class="skill">
           <img class="badge" src="Vendors/Images/leaflet-logo.jpg" alt="LEAFLET" />
           <p>Leaflet</p>
+        </div>
+        
+        <div class="skill">
+          <img class="badge" src="Vendors/Images/firebase-logo.png" alt="" />
+          <p>Firebase</p>
+        </div>
+        <div class="skill">
+          <img class="badge" src="Vendors/Images/flask-logo.png" alt="" />
+          <p>Flask</p>
         </div>
         <!-- SPARE -->
         <div class="skill hidden">
