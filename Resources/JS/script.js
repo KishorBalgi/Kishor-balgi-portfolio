@@ -75,6 +75,7 @@ projectsMore.addEventListener("click", function () {
   } else {
     projectsHidden.forEach((p) => p.classList.add("hidden"));
     projectsMore.innerHTML = "MORE";
+    document.getElementById("projects").scrollIntoView({ behavior: "smooth" });
   }
 });
 // NAV MOBILE:

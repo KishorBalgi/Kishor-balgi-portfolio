@@ -144,16 +144,17 @@
   .project-buttons {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
   }
   .project-buttons button {
-    margin-bottom: 15px;
+    margin: 15px auto;
   }
 }
 @media only screen and (max-width: 370px) {
   .project-img {
-    width: 15rem;
-    height: 8rem;
+    width: 17rem;
+    height: 10rem;
   }
+}
+.hidden {
+  display: none;
 }

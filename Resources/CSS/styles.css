@@ -182,6 +182,11 @@ header {
 .project-right {
   grid-template-columns: 4fr 1fr;
 }
+.projects-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px auto;
+}
 .project-img {
   width: 22rem;
   height: 13rem;
