@@ -3,10 +3,6 @@
   --color-primary: #802bb1;
   --color-primary-dark: #671894;
   --color-background: #2d283e;
-  /* --color-primary: #3498db;
-  --color-primary-dark: #2e86c1;
-  --color-background: rgb(238, 238, 238); */
-  /* 66fcf1 */
 }
 * {
   margin: 0;
@@ -21,7 +17,6 @@ body {
   width: 100vw;
   background-color: var(--color-background);
   font-family: monospace;
-  z-index: 25;
   overflow-x: hidden;
 }
 .row {
@@ -56,10 +51,6 @@ button {
   background: none;
   cursor: pointer;
 }
-nav {
-  z-index: 50;
-  height: fit-content;
-}
 /* Scroll bar */
 ::-webkit-scrollbar {
   width: 5px;
@@ -76,6 +67,7 @@ nav {
 }
 /* STICKY NAV */
 nav {
+  position: absolute;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -83,9 +75,10 @@ nav {
   border-bottom-right-radius: 20px;
   border-bottom-left-radius: 20px;
   width: 100vw;
-  margin: 0 auto;
+  padding: 0 20px;
   transition: all 0.5s ease;
   box-shadow: 2px 2px 10px 3px rgba(0, 0, 0, 0.356);
+  z-index: 999;
 }
 
 .sticky-nav {
@@ -132,18 +125,15 @@ nav {
 }
 /* Header */
 header {
+  position: relative;
   height: 100vh;
   min-height: fit-content;
   display: flex;
-  flex-direction: column;
   align-items: center;
+  overflow: hidden;
 }
 .landing-profile {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  padding-top: 100px;
-  margin: 0 auto;
+  position: absolute;
 }
 .welcome-note {
   font-size: 3.5rem;
@@ -152,9 +142,11 @@ header {
   color: var(--color-primary);
   font-weight: bold;
 }
-.landing-profile-photo {
-  width: 25rem;
-  height: 25rem;
+.header-img {
+  opacity: 0.1;
+}
+.header-img img {
+  width: 60vw;
 }
 /* ABOUT ME */
 .box {

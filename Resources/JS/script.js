@@ -86,7 +86,7 @@ navMobBtn.addEventListener("click", function () {
     navMobBtnImg.setAttribute("src", "Vendors/Icons/009-nav-close.png");
     navMobBtnImg.style.margin = "0";
     navItems.style.display = "contents";
-    nav.style.height = "100vh";
+    nav.style.height = "50vh";
     nav.style.paddingTop = "50px";
     nav.style.justifyContent = "flex-start";
     nav.style.flexDirection = "column";
@@ -106,8 +106,5 @@ window.addEventListener("load", function () {
   const width = screen.width;
   if (width <= 950) {
     nav.classList.add("sticky-nav");
-    nav.classList.remove("nav");
-    nav.removeEventListener("mouseover", mouseOver);
-    nav.removeEventListener("mouseout", mouseOut);
   }
 });

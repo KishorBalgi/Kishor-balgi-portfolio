@@ -21,11 +21,7 @@
     grid-template-columns: repeat(3, 1fr);
   }
   .welcome-note {
-    font-size: 2.5rem;
-  }
-  .landing-profile-photo {
-    width: 20rem;
-    height: 20rem;
+    font-size: 3rem;
   }
   .mail p {
     font-size: 1.7rem;
@@ -33,6 +29,12 @@
   .social-links img {
     width: 2rem;
     height: 2rem;
+  }
+  .header-img {
+    padding-left: 200px;
+  }
+  .header-img img {
+    width: 70vw;
   }
 }
 @media only screen and (max-width: 950px) {
@@ -76,14 +78,28 @@
     align-self: center;
   }
 }
+@media only screen and (max-width: 800px) {
+  .header-img {
+    padding-left: 180px;
+  }
+}
 @media only screen and (max-width: 680px) {
   .showcase {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .welcome-note {
+    font-size: 2.7rem;
+  }
+  .header-img {
+    padding-left: 150px;
   }
 }
 @media only screen and (max-width: 580px) {
   .social-links {
     flex-direction: column;
+  }
+  nav {
+    padding: 0;
   }
   .mail {
     padding-bottom: 15px;
@@ -98,6 +114,12 @@
   }
   h2 {
     font-size: 1.75rem;
+  }
+  .welcome-note {
+    font-size: 2.5rem;
+  }
+  .header-img {
+    padding-left: 100px;
   }
 }
 @media only screen and (max-width: 435px) {
@@ -115,7 +137,7 @@
     margin-right: 20px;
   }
   .welcome-note {
-    font-size: 2.25rem;
+    font-size: 2.2rem;
   }
   .showcase {
     grid-column-gap: 1.5rem;
@@ -130,6 +152,9 @@
   .badge {
     width: 5rem;
     height: 5rem;
+  }
+  .header-img {
+    display: none;
   }
 }
 @media only screen and (max-width: 370px) {
