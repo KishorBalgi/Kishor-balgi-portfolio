@@ -132,6 +132,7 @@ header {
   align-items: center;
   overflow: hidden;
 }
+
 .landing-profile {
   position: absolute;
 }
@@ -157,6 +158,10 @@ header {
 .content {
   font-size: 2rem;
   line-height: 3rem;
+  padding: 30px 0;
+}
+.content p {
+  text-align: center;
 }
 /* PROJECTS */
 #projects {
