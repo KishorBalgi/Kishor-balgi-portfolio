@@ -61,6 +61,25 @@
     <section id="projects" class="row section-hidden">
       <h1>&#60;Projects&#62;</h1>
 
+      <div class="project">
+        <img class="project-img" src="https://i.ibb.co/YWCHfWX/desktop.png" />
+        <div class="project-description left">
+          <h2>Chat Application</h2>
+          <p>This a simple chat application, front-end built using react with redux state managment and back-end built using Node.js with Express.js. The real time messaging is implemented using Socket.io and Database used is MongoDB with Mongoose. The app can send text, emojis, images, videos, audios and  files.</p>
+          <div class="project-buttons">
+            <button class="project-but project-site-link">
+              <a href="https://chat-client-kb.herokuapp.com/" target="_blank">View Project</a>
+            </button>
+            <button class="project-but project-repo-link">
+              <a href="https://github.com/KishorBalgi/chat-server" target="_blank">Server Repository</a>
+            </button>
+            <button class="project-but project-repo-link">
+              <a href="https://github.com/KishorBalgi/chat-client" target="_blank">Client Repository</a>
+            </button>
+          </div>
+        </div>
+      </div>
+
       <div class="project project-right">
         <div class="project-description right">
           <h2>Photographer Portfolio Website</h2>
@@ -202,8 +221,16 @@
           <p>JS</p>
         </div>
         <div class="skill">
+          <img class="badge" src="https://i.ibb.co/42jFj38/nodejs-icon.png" alt="nodejs-logo" />
+          <p>Node.JS</p>
+        </div>
+        <div class="skill">
           <img class="badge" src="https://i.ibb.co/fCgY73q/react-logo.png" alt="react-logo" />
           <p>React</p>
+        </div>
+        <div class="skill">
+          <img class="badge" src="https://i.ibb.co/0cWvrry/redux-logo.png" alt="redux-logo">
+          <p>Redux</p>
         </div>
         <div class="skill">
           <img
@@ -232,23 +259,6 @@
           />
           <p>GitHub</p>
         </div>
-        <div class="skill">
-          <img class="badge" src="https://i.ibb.co/0cWvrry/redux-logo.png" alt="redux-logo">
-          <p>Redux</p>
-        </div>
-        <div class="skill">
-          <img class="badge" src="https://i.ibb.co/nzZxjP6/leaflet-logo.png" alt="leaflet-logo" />
-          <p>Leaflet</p>
-        </div>
-        
-        <div class="skill">
-          <img class="badge" src="https://i.ibb.co/wK6D1Y8/firebase-logo.png" alt="firebase-logo"/>
-          <p>Firebase</p>
-        </div>
-        <div class="skill">
-          <img class="badge" src="https://i.ibb.co/z6r9G2b/flask-logo.png" alt="flask-logo"  />
-          <p>Flask</p>
-        </div>
         <!-- SPARE -->
         <div class="skill hidden">
           <img class="badge" src="Vendors/Images/Cube.jpg" alt="" />
@@ -273,8 +283,8 @@
       </div>
     </footer>
 
-    <!-- <div class="form-box hidden">
-      <form>
+    <div class="form-box hidden">
+      <form method="post" action="http://localhost:9000/sendMail">
         <button><img class="close-contact" alt="X" src="Vendors/Icons/007-cancle.png"></button>
         <div>
           <label for="name">Name :</label>
@@ -282,15 +292,17 @@
         </div>
         <div>
           <label for="email">E-Mail :</label>
-          <input id="email" name="e-mail" type="email">
+          <input id="email" name="email" type="email">
         </div>
         <div>
           <label for="message">Message :</label>
           <textarea id="message" name="message" type="text"></textarea>
         </div>
+        <input class="hidden" id="to" name="to" type="email" value="kishorwebdev@gmail.com">
+
         <button type="submit">SEND</button>
       </form>
-    </div> -->
+    </div>
 
     <div class="overlay hidden"></div>
   </body>

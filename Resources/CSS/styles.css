@@ -206,6 +206,7 @@ header {
   transition: all 0.7s ease;
   padding: 0.5rem 0.9rem;
   margin-right: 6px;
+  margin-top: 10px;
   border-radius: 50px;
 }
 .project-but:hover {

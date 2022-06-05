@@ -41,18 +41,18 @@ navItems.addEventListener("click", function (e) {
   }
 });
 //CONTACT FORM:
-// contactBtn.addEventListener("click", function () {
-//   contactForm.classList.toggle("hidden");
-//   overlay.classList.toggle("hidden");
-// });
-// closeContact.addEventListener("click", function (e) {
-//   e.preventDefault();
-//   contactForm.classList.toggle("hidden");
-//   overlay.classList.toggle("hidden");
-// });
-// overlay.addEventListener("click", function () {
-//   closeContact.click();
-// });
+contactBtn.addEventListener("click", function () {
+  contactForm.classList.toggle("hidden");
+  overlay.classList.toggle("hidden");
+});
+closeContact.addEventListener("click", function (e) {
+  e.preventDefault();
+  contactForm.classList.toggle("hidden");
+  overlay.classList.toggle("hidden");
+});
+overlay.addEventListener("click", function () {
+  closeContact.click();
+});
 // SECTION REVEAL:
 const revealSection = function (entries, observer) {
   const [entry] = entries;
